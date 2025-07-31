@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhargavi - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-slate-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl font-bold gradient-text">Bhargavi</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-cyan-400">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#home" class="block py-2 text-slate-300 hover:text-cyan-400">Home</a>
+                <a href="#about" class="block py-2 text-slate-300 hover:text-cyan-400">About</a>
+                <a href="#education" class="block py-2 text-slate-300 hover:text-cyan-400">Education</a>
+                <a href="#experience" class="block py-2 text-slate-300 hover:text-cyan-400">Experience</a>
+                <a href="#skills" class="block py-2 text-slate-300 hover:text-cyan-400">Skills</a>
+                <a href="#contact" class="block py-2 text-slate-300 hover:text-cyan-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-spin-slow"></div>
+        </div>
+        
+        <div class="particles" id="particles"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="hero-content">
+                <h1 class="hero-text text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight text-slate-100">
+                    Hi, I'm Bhargavi
+                </h1>
+                
+                <div class="relative">
+                    <p id="typing-roles" class="text-xl md:text-2xl lg:text-3xl text-slate-300 mb-8 max-w-4xl mx-auto font-light leading-relaxed min-h-[3rem]">
+                        <span class="typed-cursor">|</span>
+                    </p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://drive.google.com/uc?export=download&id=1BaNtiweqfwRZ2Ay0IxQSjRjmuZ6Orgcc"
+   class="btn-primary px-10 py-4 rounded-xl font-semibold text-slate-900 tracking-wide flex items-center gap-2"
+   target="_blank" rel="noopener noreferrer">
+    <span>Download CV</span>
+    <i class="fas fa-download text-sm"></i>
+</a>
+
+                    <a href="#contact" class="btn-secondary px-10 py-4 rounded-xl font-semibold tracking-wide">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 section-hidden">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="section-hidden">
+                    <!-- Image removed -->
+                </div>
+                <div class="section-hidden">
+                    <h3 class="text-2xl font-semibold mb-4">Passionate Developer & Problem Solver</h3>
+                    <p class="text-slate-300 mb-6">
+                        As an engineering student with a passion for web development, I specialize in building responsive, 
+                        user-friendly applications using the MERN stack. My journey began with a curiosity for how websites work—and today,
+                         I enjoy turning ideas into real-world projects through clean code and intuitive design.
+                    </p>
+                    <p class="text-slate-300">
+                        Outside of coding, I actively contribute to tech communities like my college’s programming club, 
+                        and I'm always exploring new tools, solving DSA problems, and refining my skills to become industry-ready.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 section-hidden">Education</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="timeline-item section-hidden mb-8">
+                    <div class="glass-card p-6 rounded-lg">
+                        <div>
+                            <!-- <h3 class="text-xl font-semibold mb-2">Bachelor in Technology-ECE</h3> -->
+                            <div class="flex items-center gap-3 mb-2">
+                             <img src="https://media.licdn.com/dms/image/v2/C510BAQGHhq9X-H8LyQ/company-logo_200_200/company-logo_200_200/0/1631345366169?e=2147483647&v=beta&t=8hq7Hhr_Vlu6uIXpTU9yv31n6jB0_zBzvuFqHmHGwlg" alt="" class="w-10 h-10 object-contain rounded">
+                             <h3 class="text-xl font-semibold">Bachelor in Technology</h3>
+                             </div> 
+                            <p class="text-cyan-400 mb-2">ABES Engineering College • 2022 - 2026</p>
+                            <p class="text-slate-300">Majors in Electronics and Communication Engineering.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item section-hidden mb-8">
+                    <div class="glass-card p-6 rounded-lg">
+                        <div>
+                          <!---  <h3 class="text-xl font-semibold mb-2">Intermediate</h3> -->
+                            <div class="flex items-center gap-3 mb-2">
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-DeUto7e9O0YyhbbJFmU4GRBuYuPyz01A1w&s" alt="" class="w-10 h-10 object-contain rounded">
+                             <h3 class="text-xl font-semibold">Intermediate</h3>
+                             </div> 
+                            <p class="text-cyan-400 mb-2">Cambridge Senior Secondary School,Buxar • 2021 - 2022</p>
+                            <p class="text-slate-300">Physics,Chemistry,Maths with Computer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 section-hidden">Experience</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="timeline-item section-hidden mb-8">
+                    <div class="glass-card p-6 rounded-lg">
+                        <div>
+                            <!-- <h3 class="text-xl font-semibold mb-2">Software Developer Intern</h3> -->
+                             <div class="flex items-center gap-3 mb-2">
+                             <img src="https://media.licdn.com/dms/image/v2/D560BAQHP4iG3eYPHPA/company-logo_200_200/company-logo_200_200/0/1696913393804?e=2147483647&v=beta&t=HA4t0YUgW02oCMWaK5tRs4efzC-2EtEq_ftD3hpZw4E" alt="BlueStock" class="w-10 h-10 object-contain rounded">
+                             <h3 class="text-xl font-semibold">Software Developer Intern</h3>
+                             </div>
+                            <p class="text-cyan-400 mb-2">BlueStock Fintech • May 2025 - June 2025</p>
+                            <ul class="text-slate-300 list-disc list-inside space-y-1">
+                                <li>Learned to build user interfaces using React.js and worked on improving parts of the website.</li>
+                                <li>Helped create backend routes using Node.js and understood how data flows in a full-stack app.</li>
+                                <li>Reduced application load time by 40% through optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item section-hidden mb-8">
+                    <div class="glass-card p-6 rounded-lg">
+                        <div>
+                            <!-- <h3 class="text-xl font-semibold mb-2">Volunteering</h3> -->
+                              <div class="flex items-center gap-3 mb-2">
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdMm0pJjzAd6-xoBglX4Ti0gkoTC0AKfkzzg&s" alt="BlueStock" class="w-10 h-10 object-contain rounded">
+                             <h3 class="text-xl font-semibold">Volunteering</h3>
+                             </div>
+                            <p class="text-cyan-400 mb-2">Enigma Programming Club ABESEC • 2023 - Present</p>
+                            <ul class="text-slate-300 list-disc list-inside space-y-1">
+                                <li>Actively participated in club activities and team discussions.</li>
+                                <li>Contributed to event planning, content writing, and small tech tasks.</li>
+                                <li>Helped juniors and peers by sharing resources and learning together.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 section-hidden">Skills</h2>
+            
+            <!-- Frontend Skills -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-center section-hidden">Frontend Development</h3>
+                <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div class="glass-card p-4 rounded-lg section-hidden">
+                    <div class="flex justify-between mb-2 items-center">
+                    <div class="flex items-center gap-2">
+                    <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML" class="w-6 h-6">
+                    <span>HTML/CSS</span>
+                    </div>
+                    <span>95%</span>
+                    </div>
+                 <div class="skill-bar">
+                    <div class="skill-progress" data-width="95"></div>
+                 </div>
+                </div>
+
+                    <div class="glass-card p-4 rounded-lg section-hidden">
+                     <div class="flex justify-between mb-2 items-center">
+                     <div class="flex items-center gap-2">
+      <img src="https://img.icons8.com/?size=96&id=108784&format=png" alt="JS" class="w-6 h-6">
+      <span>JavaScript</span>
+    </div>
+    <span>95%</span>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-progress" data-width="95"></div>
+  </div>
+</div>
+                    <div class="glass-card p-4 rounded-lg section-hidden">
+                     <div class="flex justify-between mb-2 items-center">
+                     <div class="flex items-center gap-2">
+      <img src="https://img.icons8.com/?size=160&id=wPohyHO_qO1a&format=png" alt="" class="w-6 h-6">
+      <span>React.js</span>
+    </div>
+    <span>95%</span>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-progress" data-width="95"></div>
+  </div>
+</div>
+                    
+                    <div class="glass-card p-4 rounded-lg section-hidden">
+                     <div class="flex justify-between mb-2 items-center">
+                     <div class="flex items-center gap-2">
+      <img src="https://img.icons8.com/?size=96&id=PndQWK6M1Hjo&format=png" alt="" class="w-6 h-6">
+      <span>BootStrap</span>
+    </div>
+    <span>82%</span>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-progress" data-width="95"></div>
+  </div>
+</div>
+                    <div class="glass-card p-4 rounded-lg section-hidden">
+                     <div class="flex justify-between mb-2 items-center">
+                     <div class="flex items-center gap-2">
+      <img src="https://img.icons8.com/?size=96&id=CIAZz2CYc6Kc&format=png" alt="JS" class="w-6 h-6">
+      <span>Tailwind CSS</span>
+    </div>
+    <span>80%</span>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-progress" data-width="95"></div>
+  </div>
+</div>
+                    
+                </div>
+            </div>
+
+            <!-- Backend Skills -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-center section-hidden">Backend Development</h3>
+                <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                 
+                                        <div class="glass-card p-4 rounded-lg section-hidden">
+                     <div class="flex justify-between mb-2 items-center">
+                     <div class="flex items-center gap-2">
+      <img src="https://img.icons8.com/?size=96&id=hsPbhkOH4FMe&format=png" alt="JS" class="w-6 h-6">
+      <span>Node.js</span>
+    </div>
+    <span>70%</span>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-progress" data-width="70"></div>
+  </div>
+</div>
+
+                    <div class="glass-card p-4 rounded-lg section-hidden">
+                     <div class="flex justify-between mb-2 items-center">
+                     <div class="flex items-center gap-2">
+      <img src="https://img.icons8.com/?size=96&id=qGUfLiYi1bRN&format=png" alt="JS" class="w-6 h-6">
+      <span>MySQL</span>
+    </div>
+    <span>90%</span>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-progress" data-width="90"></div>
+  </div>
+</div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-center section-hidden">Programming Languages</h3>
+                <div class="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                    <div class="glass-card p-4 text-center section-hidden">
+                        <img src="https://img.icons8.com/?size=96&id=Pd2x9GWu9ovX&format=png" alt="" class="mx-auto mb-2 w-6 h-6">
+                        <p>Java</p>
+                    </div>
+                    <div class="glass-card p-4 text-center section-hidden">
+                        <img src="https://img.icons8.com/?size=96&id=13441&format=png" alt="" class="mx-auto mb-2 w-6 h-6">
+                        <p>Python</p>
+                    </div>
+                    <div class="glass-card p-4 text-center section-hidden">
+                        <img src="https://img.icons8.com/?size=100&id=shQTXiDQiQVR&format=png&color=000000" alt="" class="mx-auto mb-2 w-6 h-6">
+                        <p>C</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-6 text-center section-hidden">Tools & Technologies</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                    <div class="glass-card p-4 text-center section-hidden">
+                        <img src="https://img.icons8.com/?size=96&id=9OGIyU8hrxW5&format=png" alt="" class="mx-auto mb-2 w-6 h-6">
+                        <p>VS Code Editor</p>
+                    </div>
+                    <div class="glass-card p-4 text-center section-hidden">
+                        <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000" alt="" class="mx-auto mb-2 w-6 h-6">
+                        <p>GitHub</p>
+                    </div>
+                    <div class="glass-card p-4 text-center section-hidden">
+                        <img src="https://img.icons8.com/?size=96&id=20906&format=png" alt="" class="mx-auto mb-2 w-6 h-6">
+                        <p>Git</p>
+                    </div>
+                    <div class="glass-card p-4 text-center section-hidden">
+                       <img src="https://img.icons8.com/?size=100&id=YsPdguLCFOMH&format=png&color=000000" alt="" class="mx-auto mb-2 w-6 h-6">
+                        <p>Netlify</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 section-hidden">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 5-->
+    <div class="glass-card p-6 rounded-lg section-hidden">
+  <img src="landing.png" alt="" class="w-full h-40 object-cover rounded mb-4">
+  
+  <h3 class="text-xl font-bold mb-2">Landing Page</h3>
+  <p class="text-slate-300 text-sm mb-4">
+A modern and fully responsive login landing page built using React.js, featuring clean UI design, 
+component-based structure, and smooth layout adaptability across devices.  </p>
+  <div class="flex flex-wrap gap-2 mb-4">
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">HTML</span>
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">CSS</span>
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">JavaScript</span>
+        <span class="text-xs bg-slate-700 px-2 py-1 rounded">React.js</span>
+
+  </div>
+  <div class="flex justify-between">
+    <a href="https://login-page-jwkv7g6a1-bhargavis-projects-ef213c9d.vercel.app/" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold text-slate-900">Live Demo</a>
+    <a href="https://github.com/bhargavi-0/login_page" target="_blank" class="btn-secondary px-4 py-2 rounded text-sm font-semibold">Code</a>
+  </div>
+</div>
+                <!-- Project 1 -->
+                <div class="glass-card p-6 rounded-lg section-hidden">
+  <img src="to-do.png" alt="Project Screenshot" class="w-full h-40 object-cover rounded mb-4">
+
+  
+  <h3 class="text-xl font-bold mb-2">TO-DO-LIST</h3>
+  <p class="text-slate-300 text-sm mb-4">
+A simple and responsive task manager built using HTML, CSS, and JavaScript, 
+allowing users to add, delete, and mark tasks with data saved in local storage for persistence.
+</p>
+  <div class="flex flex-wrap gap-2 mb-4">
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">HTML</span>
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">CSS</span>
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">JavaScript</span>
+  </div>
+  <div class="flex justify-between">
+    <a href="https://to-do-list-bhargavi.netlify.app/" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold text-slate-900">Live Demo</a>
+    <a href="https://github.com/bhargavi-0/todo_list" target="_blank" class="btn-secondary px-4 py-2 rounded text-sm font-semibold">Code</a>
+  </div>
+</div>
+
+
+                <!-- Project 2 -->
+          <div class="glass-card p-6 rounded-lg section-hidden">
+  <img src="ai.png" alt="" class="w-full h-40 object-cover rounded mb-4">
+  
+  <h3 class="text-xl font-bold mb-2">AI Assistant</h3>
+  <p class="text-slate-300 text-sm mb-4">
+An interactive AI-style chatbot interface built with HTML, CSS, and JavaScript, 
+designed to simulate basic question-answer interaction with clean styling and smooth user experience.
+</p>
+  <div class="flex flex-wrap gap-2 mb-4">
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">Html</span>
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">CSS</span>
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">JavaScript</span>
+  </div>
+  <div class="flex justify-between">
+    <a href="https://my-ai-help.netlify.app/" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold text-slate-900">Live Demo</a>
+    <a href="https://github.com/bhargavi-0/AI_Assistant" target="_blank" class="btn-secondary px-4 py-2 rounded text-sm font-semibold">Code</a>
+  </div>
+</div>
+
+
+                <!-- Project 3 -->
+    <div class="glass-card p-6 rounded-lg section-hidden">
+  <img src="poke.png" alt="" class="w-full h-40 object-cover rounded mb-4">
+  
+  <h3 class="text-xl font-bold mb-2">Pokemon Explorer</h3>
+  <p class="text-slate-300 text-sm mb-4">
+A dynamic Pokémon browsing app built with React.js, integrating the PokéAPI to display and filter Pokémon by type, 
+abilities, and more — featuring responsive design and smooth user interactions.  </p>
+  <div class="flex flex-wrap gap-2 mb-4">
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">React</span>
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">JavaScript</span>
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">HTML/CSS</span>
+        <span class="text-xs bg-slate-700 px-2 py-1 rounded">API</span>
+  </div>
+  <div class="flex justify-between">
+    <a href="https://bhargavipoke.netlify.app/" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold text-slate-900">Live Demo</a>
+    <a href="https://github.com/bhargavi-0/Pokemon_project" target="_blank" class="btn-secondary px-4 py-2 rounded text-sm font-semibold">Code</a>
+  </div>
+</div>
+
+                    <!-- Project 4 -->
+   
+
+ <!-- Project 5-->
+    <div class="glass-card p-6 rounded-lg section-hidden">
+  <img src="edit.png" alt="" class="w-full h-40 object-cover rounded mb-4">
+  
+  <h3 class="text-xl font-bold mb-2">Image Editor</h3>
+  <p class="text-slate-300 text-sm mb-4">
+A lightweight image editor built using HTML, CSS, and JavaScript, allowing users to apply filters like brightness, 
+contrast, grayscale, and rotate images in real-time with a user-friendly interface.  </p>
+  <div class="flex flex-wrap gap-2 mb-4">
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">HTML</span>
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">CSS</span>
+    <span class="text-xs bg-slate-700 px-2 py-1 rounded">JavaScript</span>
+  </div>
+  <div class="flex justify-between">
+    <a href="https://image-editorlite.netlify.app/" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold text-slate-900">Live Demo</a>
+    <a href="https://github.com/bhargavi-0/image_edit" target="_blank" class="btn-secondary px-4 py-2 rounded text-sm font-semibold">Code</a>
+  </div>
+</div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 section-hidden">Get In Touch</h2>
+            <div class="max-w-2xl mx-auto">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="section-hidden">
+                            <input type="text" 
+                                   name="name" 
+                                   placeholder="Your Name" 
+                                   required
+                                   class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:border-cyan-500">
+                        </div>
+                        <div class="section-hidden">
+                            <input type="email" 
+                                   name="email" 
+                                   placeholder="Your Email" 
+                                   required
+                                   class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:border-cyan-500">
+                        </div>
+                    </div>
+                    <div class="section-hidden">
+                        <input type="text" 
+                               name="subject" 
+                               placeholder="Subject" 
+                               required
+                               class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div class="section-hidden">
+                        <textarea name="message" 
+                                  placeholder="Your Message" 
+                                  rows="5" 
+                                  required
+                                  class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:outline-none focus:border-cyan-500 resize-none"></textarea>
+                    </div>
+                    <div class="text-center section-hidden">
+                        <button type="submit" 
+                                class="btn-primary px-8 py-3 rounded-lg font-semibold text-slate-900">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-8 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 mb-4 md:mb-0">
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-cyan-400 transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-cyan-400 transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
