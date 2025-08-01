@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 // Typing effect for roles
         const roles = ["Full-Stack Developer","Problem Solver"];
         let roleIndex = 0, charIndex = 0, forward = true;
@@ -54,11 +55,19 @@
         }
 
         // Form submission
-        document.getElementById('contact-form').addEventListener('submit', e => {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            e.target.reset();
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm(service_a2hj1q4, template_ql6fjlp, this, BFLq3mVokDesCUCqJ)
+        .then(function () {
+            alert('Message sent successfully!');
+        }, function (error) {
+            console.log(error);
+            alert('Failed to send message. Please try again.');
         });
+
+    e.target.reset();
+});
 
         // GSAP
         if (typeof gsap !== 'undefined') {
