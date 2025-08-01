@@ -1,4 +1,4 @@
-import emailjs from '@emailjs/browser';
+
 // Typing effect for roles
         const roles = ["Full-Stack Developer","Problem Solver"];
         let roleIndex = 0, charIndex = 0, forward = true;
@@ -58,7 +58,7 @@ import emailjs from '@emailjs/browser';
         document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    emailjs.sendForm(service_a2hj1q4, template_ql6fjlp, this, BFLq3mVokDesCUCqJ)
+    emailjs.sendForm("service_a2hj1q4", "template_ql6fjlp", this, "BFLq3mVokDesCUCqJ")
         .then(function () {
             alert('Message sent successfully!');
         }, function (error) {
